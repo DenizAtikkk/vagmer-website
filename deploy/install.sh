@@ -47,6 +47,8 @@ chown -R www-data:www-data "$WEB"
 
 # nginx site ayarı
 sed "s/__PORT__/$PORT/g" "$SRC/deploy/nginx-vagmer.conf" > /etc/nginx/sites-available/vagmer
+# IPv6 yoksa IPv6 dinleme satırını kaldır
+[ -s /proc/net/if_inet6 ] || sed -i '/listen \[::\]/d' /etc/nginx/sites-available/vagmer
 ln -sf /etc/nginx/sites-available/vagmer /etc/nginx/sites-enabled/vagmer
 
 nginx -t
