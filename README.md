@@ -12,7 +12,7 @@ Sunucuda root olarak:
 curl -fsSL https://raw.githubusercontent.com/DenizAtikkk/vagmer-website/claude/vagmer-auto-service-website-mxdwfq/deploy/install.sh | bash
 ```
 
-Site nginx ile **80 portunda** yayınlanır: `http://SUNUCU_IP`. Güncellemek için aynı komutu tekrar çalıştırın.
+Site nginx ile **8090 portunda** yayınlanır (sunucudaki diğer projelere dokunmaz): `http://SUNUCU_IP:8090`. Farklı port için: `PORT=8095 bash deploy/install.sh`. Güncellemek için aynı komutu tekrar çalıştırın.
 
 ## Düzenlenecek bilgiler
 
