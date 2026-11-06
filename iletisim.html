@@ -5,7 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>İletişim ve Randevu — VAGMER Oto Servis</title>
 <meta name="description" content="VAGMER Oto Servis iletişim bilgileri, çalışma saatleri ve online randevu formu.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#161617">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="VAGMER">
+<link rel="manifest" href="manifest.webmanifest">
 <meta property="og:title" content="İletişim ve Randevu — VAGMER Oto Servis">
 <meta property="og:description" content="VAGMER Oto Servis iletişim bilgileri, çalışma saatleri ve online randevu formu.">
 <meta property="og:type" content="website">
@@ -34,9 +40,9 @@
 
 <section class="section">
   <div class="container grid grid-3">
-    <a class="card card-dark reveal" href="tel:+905000000000" style="text-decoration:none"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></div><h3>Telefon</h3><p>+90 (5XX) XXX XX XX</p></a>
-    <a class="card card-dark reveal" data-wa="Merhaba VAGMER, bilgi almak istiyorum." href="#" style="text-decoration:none"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div><h3>WhatsApp</h3><p>Hızlı yanıt için mesaj gönderin.</p></a>
-    <a class="card card-dark reveal" href="mailto:info@vagmer.com.tr" style="text-decoration:none"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg></div><h3>E-posta</h3><p>info@vagmer.com.tr</p></a>
+    <a class="card card-dark reveal" href="tel:+905000000000" style="text-decoration:none"><div class="icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div><h3>Telefon</h3><p>+90 (5XX) XXX XX XX</p></a>
+    <a class="card card-dark reveal" data-wa="Merhaba VAGMER, bilgi almak istiyorum." href="#" style="text-decoration:none"><div class="icon"><svg viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z"/></svg></div><h3>WhatsApp</h3><p>Hızlı yanıt için mesaj gönderin.</p></a>
+    <a class="card card-dark reveal" href="mailto:info@vagmer.com.tr" style="text-decoration:none"><div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><h3>E-posta</h3><p>info@vagmer.com.tr</p></a>
   </div>
 </section>
 
@@ -54,15 +60,15 @@
     </div>
     <form id="randevu-form" class="form reveal" autocomplete="on">
       <div class="row">
-        <div class="field"><label for="ad">Ad Soyad</label><input id="ad" name="ad" required></div>
-        <div class="field"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" inputmode="tel" required></div>
+        <div class="field"><label for="ad">Ad Soyad</label><input id="ad" name="ad" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></div>
+        <div class="field"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" required></div>
       </div>
       <div class="row">
         <div class="field"><label for="marka">Marka</label>
           <select id="marka" name="marka" required>
             <option>Volkswagen</option><option>Audi</option><option>Seat</option><option>Škoda</option><option>Cupra</option><option>Porsche</option><option>Diğer</option>
           </select></div>
-        <div class="field"><label for="model">Model / Yıl</label><input id="model" name="model" placeholder=" "></div>
+        <div class="field"><label for="model">Model / Yıl</label><input id="model" name="model" autocomplete="off" enterkeyhint="next"></div>
       </div>
       <div class="row">
         <div class="field"><label for="hizmet">Hizmet</label>
@@ -71,7 +77,7 @@
           </select></div>
         <div class="field"><label for="tarih">Tercih edilen tarih</label><input id="tarih" name="tarih" type="date"></div>
       </div>
-      <div class="field"><label for="mesaj">Aracınızdaki sorun</label><textarea id="mesaj" name="mesaj"></textarea></div>
+      <div class="field"><label for="mesaj">Aracınızdaki sorun</label><textarea id="mesaj" name="mesaj" enterkeyhint="send"></textarea></div>
       <button class="btn btn-primary" type="submit">Randevu talebi gönder</button>
       <p id="form-status" class="form-status" role="status"></p>
       <p class="form-note">Gönder’e bastığınızda talebiniz WhatsApp’ta hazır bir mesaj olarak açılır.</p>
@@ -122,6 +128,11 @@
     </div>
   </div>
 </footer>
+<nav class="action-bar" aria-label="Hızlı işlemler">
+  <a class="ab-call" href="tel:+905000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Ara</a>
+  <a class="ab-wa" data-wa="Merhaba VAGMER, bilgi almak istiyorum." href="iletisim.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>WhatsApp</a>
+  <a class="ab-cta" href="iletisim.html#randevu">Randevu al</a>
+</nav>
 <a class="fab" data-wa="Merhaba VAGMER, bilgi almak istiyorum." href="iletisim.html" aria-label="WhatsApp ile yazın"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg></a>
 <script src="assets/js/main.js" defer></script>
 </body>

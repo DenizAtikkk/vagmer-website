@@ -1,0 +1,10 @@
+{
+  "name": "VAGMER Oto Servis",
+  "short_name": "VAGMER",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#161617",
+  "lang": "tr",
+  "icons": [{ "src": "assets/img/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
