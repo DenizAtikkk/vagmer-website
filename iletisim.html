@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>İletişim ve Randevu — VAGMER Oto Servis</title>
+<meta name="description" content="VAGMER Oto Servis iletişim bilgileri, çalışma saatleri ve online randevu formu.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="İletişim ve Randevu — VAGMER Oto Servis">
+<meta property="og:description" content="VAGMER Oto Servis iletişim bilgileri, çalışma saatleri ve online randevu formu.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/logo.svg">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="nav" role="navigation" aria-label="Ana menü">
+  <div class="container">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="" width="28" height="28">VAGMER</a>
+    <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false"><span></span><span></span></button>
+    <ul class="nav-links"><li><a href="index.html">Ana Sayfa</a></li><li><a href="hizmetler.html">Hizmetler</a></li><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="iletisim.html" aria-current="page">İletişim</a></li><li><a class="nav-cta" href="iletisim.html#randevu">Randevu Al</a></li></ul>
+  </div>
+</header>
+<main>
+
+<section class="page-hero alt">
+  <div class="container narrow reveal">
+    <p class="eyebrow">İletişim</p>
+    <h1 class="display">Bize ulaşın.</h1>
+    <p class="lead">Sorularınız, fiyat teklifi veya randevu için buradayız.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid grid-3">
+    <a class="card card-dark reveal" href="tel:+905000000000" style="text-decoration:none"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></div><h3>Telefon</h3><p>+90 (5XX) XXX XX XX</p></a>
+    <a class="card card-dark reveal" data-wa="Merhaba VAGMER, bilgi almak istiyorum." href="#" style="text-decoration:none"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div><h3>WhatsApp</h3><p>Hızlı yanıt için mesaj gönderin.</p></a>
+    <a class="card card-dark reveal" href="mailto:info@vagmer.com.tr" style="text-decoration:none"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg></div><h3>E-posta</h3><p>info@vagmer.com.tr</p></a>
+  </div>
+</section>
+
+<section id="randevu" class="section alt" style="scroll-margin-top:var(--nav-h)">
+  <div class="container split" style="align-items:start">
+    <div class="reveal">
+      <p class="eyebrow">Online Randevu</p>
+      <h2 class="headline">Randevunuzu<br>şimdi oluşturun.</h2>
+      <p class="lead">Formu doldurun, talebiniz WhatsApp üzerinden bize ulaşsın. En kısa sürede dönüş yapıp randevunuzu onaylayalım.</p>
+      <table class="hours" aria-label="Çalışma saatleri">
+        <tr><td>Pazartesi – Cuma</td><td>08:30 – 19:00</td></tr>
+        <tr><td>Cumartesi</td><td>09:00 – 17:00</td></tr>
+        <tr><td>Pazar</td><td>Kapalı</td></tr>
+      </table>
+    </div>
+    <form id="randevu-form" class="form reveal" autocomplete="on">
+      <div class="row">
+        <div class="field"><label for="ad">Ad Soyad</label><input id="ad" name="ad" required></div>
+        <div class="field"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" inputmode="tel" required></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="marka">Marka</label>
+          <select id="marka" name="marka" required>
+            <option>Volkswagen</option><option>Audi</option><option>Seat</option><option>Škoda</option><option>Cupra</option><option>Porsche</option><option>Diğer</option>
+          </select></div>
+        <div class="field"><label for="model">Model / Yıl</label><input id="model" name="model" placeholder=" "></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="hizmet">Hizmet</label>
+          <select id="hizmet" name="hizmet">
+            <option>Arıza Tespit</option><option>Motor Revizyonu</option><option>Triger Seti</option><option>DSG / Şanzıman</option><option>Turbo / Enjektör</option><option>Periyodik Bakım</option><option>Diğer</option>
+          </select></div>
+        <div class="field"><label for="tarih">Tercih edilen tarih</label><input id="tarih" name="tarih" type="date"></div>
+      </div>
+      <div class="field"><label for="mesaj">Aracınızdaki sorun</label><textarea id="mesaj" name="mesaj"></textarea></div>
+      <button class="btn btn-primary" type="submit">Randevu talebi gönder</button>
+      <p id="form-status" class="form-status" role="status"></p>
+      <p class="form-note">Gönder’e bastığınızda talebiniz WhatsApp’ta hazır bir mesaj olarak açılır.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="reveal">
+      <p class="eyebrow">Konum</p>
+      <h2 class="headline">Atölyemiz.</h2>
+      <div class="info" style="margin-top:28px">
+        <div class="info-item"><div><h4>Adres</h4><p>İstanbul, Türkiye</p></div></div>
+        <div class="info-item"><div><h4>Telefon</h4><a href="tel:+905000000000">+90 (5XX) XXX XX XX</a></div></div>
+        <div class="info-item"><div><h4>E-posta</h4><a href="mailto:info@vagmer.com.tr">info@vagmer.com.tr</a></div></div>
+      </div>
+    </div>
+    <iframe class="map reveal" title="VAGMER konum" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Istanbul&z=11&output=embed"></iframe>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="" width="24" height="24">VAGMER</a>
+        <p>Motor mekanik ve VAG grubu araçlarda uzman oto servis. Doğru teşhis, şeffaf fiyat, garantili işçilik.</p>
+      </div>
+      <div><h5>Site</h5><ul><li><a href="index.html">Ana Sayfa</a></li><li><a href="hizmetler.html">Hizmetler</a></li><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+      <div><h5>Hizmetler</h5><ul>
+        <li><a href="hizmetler.html#motor">Motor Revizyonu</a></li>
+        <li><a href="hizmetler.html#triger">Triger Seti</a></li>
+        <li><a href="hizmetler.html#sanziman">DSG Şanzıman</a></li>
+        <li><a href="hizmetler.html#diagnostik">Arıza Tespit</a></li>
+      </ul></div>
+      <div><h5>İletişim</h5><ul>
+        <li><a href="tel:+905000000000">+90 (5XX) XXX XX XX</a></li>
+        <li><a href="mailto:info@vagmer.com.tr">info@vagmer.com.tr</a></li>
+        <li>İstanbul, Türkiye</li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © <span id="year">2026</span> VAGMER Oto Servis. Tüm hakları saklıdır.</span>
+      <span>Volkswagen, Audi, Seat, Škoda ve Porsche ilgili sahiplerinin tescilli markalarıdır.</span>
+    </div>
+  </div>
+</footer>
+<a class="fab" data-wa="Merhaba VAGMER, bilgi almak istiyorum." href="iletisim.html" aria-label="WhatsApp ile yazın"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg></a>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
